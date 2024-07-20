@@ -44,7 +44,7 @@ void printPackageCount() {
 
     char buffer[128];
     if (fgets(buffer, sizeof(buffer) - 1, fp) != NULL) {
-        buffer[strcspn(buffer, "\n")] = '\0'; // Remove trailing newline
+        buffer[strcspn(buffer, "\n")] = '\0';
         printRainbow("Packages", buffer, COLOR2);
     }
     pclose(fp);
